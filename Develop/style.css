@@ -24,7 +24,7 @@ textarea {
 .description {
   white-space: pre-wrap;
 }
-
+/*new code*/
 .container {
   display:table;
 }
@@ -37,7 +37,9 @@ textarea {
   display:table-cell;
   padding:5px;
   border:1px solid #333;
+  width:auto
 }
+/*newcode*/
 
 .time-block {
   text-align: center;

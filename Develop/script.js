@@ -17,10 +17,19 @@ $('.edit_cont')
     }
   });
 
-  
-  /*setInterval(function(){ 
-    //this code runs every second 
-}, 1000);
+  saveButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    var studentGrade = {
+      student: student.value,
+      grade: grade.value,
+      comment: comment.value.trim()
+    };
+    
+    localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+    renderMessage();
+    
+    });
 
 
 
