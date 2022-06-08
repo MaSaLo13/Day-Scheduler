@@ -1,3 +1,6 @@
+var text = document.querySelector("textarea");
+var saveB = document.querySelector("bi bi-save-fill");
+
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
@@ -7,7 +10,7 @@ $('.edit_cont')
   .each(function(){
     var val = parseInt($(this).prop('id'));
     if(val > currentHour && val < currentHour + 24){
-      $(this).css('background-color','Blue');
+      $(this).css('background-color','Gray');
     }else if(val < currentHour && val > currentHour-24){
       $(this).css('background-color','Red');
     }else if(val === currentHour){
@@ -17,16 +20,13 @@ $('.edit_cont')
     }
   });
 
-  saveButton.addEventListener("click", function(event) {
+  saveB.addEventListener("click", function(event) {
     event.preventDefault();
-    
-    var studentGrade = {
-      student: student.value,
-      grade: grade.value,
-      comment: comment.value.trim()
+   var textInput = {
+      text: text.value.trim()
     };
     
-    localStorage.setItem("studentGrade", JSON.stringify(studentGrade));
+    localStorage.setItem("textInput", JSON.stringify(textInput));
     renderMessage();
     
     });
