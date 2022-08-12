@@ -1,4 +1,5 @@
 var saveB = document.querySelector("#hello");
+var text = document.querySelector("#ten");
 
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
@@ -20,9 +21,24 @@ $('.edit_cont')
   });
 
 
+  function renderLastInput() {
+    // TODO: Retrieve the last email and password and render it to the page
+    var ten = localStorage.getItem("10 AM");
+    // var password = localStorage.getItem("password");
+  
+   /* if (!email || !password) {
+      return;
+    }*/
+  
+    text.textContent = ten;
+    // userPasswordSpan.textContent = password;
+    
+  }
+
   saveB.addEventListener("click", function(event) {
     event.preventDefault();
   
+    var text = document.querySelector("#nine").value;
     var text = document.querySelector("#ten").value;
    
   
@@ -32,7 +48,8 @@ $('.edit_cont')
     //   displayMessage("success", "Saved successfully");
   
     // TODO: Save email and password to localStorage and render the last registered user
-    localStorage.setItem("text", text);
+    localStorage.setItem("10 AM", text);
+    renderLastInput();
   }
   );
 
