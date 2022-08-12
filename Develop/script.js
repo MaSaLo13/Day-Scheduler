@@ -38,8 +38,15 @@ $('.edit_cont')
   saveB.addEventListener("click", function(event) {
     event.preventDefault();
   
-    var text = document.querySelector("#nine").value;
-    var text = document.querySelector("#ten").value;
+    var nine = document.querySelector("#nine").value;
+    var ten = document.querySelector("#ten").value;
+    var eleven = document.querySelector("#eleven").value;
+    var twelve = document.querySelector("#twelve").value;
+    var one = document.querySelector("#one").value;
+    var two = document.querySelector("#two").value;
+    var three = document.querySelector("#three").value;
+    var four = document.querySelector("#four").value;
+    var five = document.querySelector("#five").value;
    
   
     // if (text === "") {
@@ -48,7 +55,15 @@ $('.edit_cont')
     //   displayMessage("success", "Saved successfully");
   
     // TODO: Save email and password to localStorage and render the last registered user
-    localStorage.setItem("10 AM", text);
+    localStorage.setItem("9 AM", nine);
+    localStorage.setItem("10 AM", ten);
+    localStorage.setItem("11 AM", eleven);
+    localStorage.setItem("12 PM", twelve);
+    localStorage.setItem("1 PM", one);
+    localStorage.setItem("2 PM", two);
+    localStorage.setItem("3 PM", three);
+    localStorage.setItem("4 PM", four);
+    localStorage.setItem("5 PM", five);
     renderLastInput();
   }
   );
