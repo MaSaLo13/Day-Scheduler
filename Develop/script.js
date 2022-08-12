@@ -1,5 +1,4 @@
-var text = document.querySelector("textarea");
-var saveB = document.querySelector("bi bi-save-fill");
+var saveB = document.querySelector("#hello");
 
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
@@ -20,16 +19,41 @@ $('.edit_cont')
     }
   });
 
+
   saveB.addEventListener("click", function(event) {
     event.preventDefault();
-   var textInput = {
-      text: text.value.trim()
-    };
+  
+    var text = document.querySelector("#ten").value;
+   
+  
+    // if (text === "") {
+    //   displayMessage("error", "text area cannot be blank");
+    // } else {
+    //   displayMessage("success", "Saved successfully");
+  
+    // TODO: Save email and password to localStorage and render the last registered user
+    localStorage.setItem("text", text);
+  }
+  );
+
+  // $(document).ready(function() {
+  //   const saveB = document.querySelector('saveBtn');
+  //   saveB.addEventListener("click", function(event) {
+  //   event.preventDefault();
+  //   var textInput = {
+  //      text: text.value.trim(),
+  //   }});
+  // });0
+     
+  //     localStorage.setItem("textArea", JSON.stringify(textArea));
+  //saveB.addEventListener("click", function(event) {
+   // event.preventDefault();
+   //var textInput = {
+     // text: text.value.trim()
+   // };
     
-    localStorage.setItem("textInput", JSON.stringify(textInput));
-    renderMessage();
+    //localStorage.setItem("textInput", JSON.stringify(textInput));
     
-    });
 
 
 
