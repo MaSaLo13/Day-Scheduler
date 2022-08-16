@@ -1,19 +1,25 @@
 # Day-Scheduler
 
-* Created a day scheduler 
-    - Scheduler shows time from 9 AM - 5 PM 
-    - The text area will display green for current time, red for past and gray for future. 
-    - You can type in the text area / color filled area 
-    - By clicking the save button, it is able to save what was written in the text area. 
+## Description
+Created a work day schedule application where:
+* It displays current date
+* Rows are displayed by hour from 9 AM - 5 PM 
+* The text area's color will change depending on time:
+    * Green for current time
+    * Red for past
+    * Gray for future 
+* You can type in the text area and have it saved 
+* By clicking the save button, it is able to save what was written in the text area inside local storage. 
+* After you leave the page or refresh it, what you had saved will be displayed there.
 
-# Screenshot of Day-Scheduler
-![Screenshot of Day-Scheduler](./Assets/Day-Scheduler.png)
+
+![Screenshot of Day-Scheduler](./Assets/DayScheduler.png)
 
 
-
-repolink: 
+## Links
+GitHub: 
 https://github.com/MaSaLo13/Day-Scheduler
 
-deployed site:
+Deployed Site:
 https://masalo13.github.io/Day-Scheduler/
 

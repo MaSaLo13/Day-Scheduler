@@ -1,6 +1,3 @@
-var saveB = document.querySelector("#hello");
-var text = document.querySelector("#ten");
-
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
@@ -19,8 +16,7 @@ $('.edit_cont')
       $(this).css('background-color','White');
     }
   });
-
-
+  
   function saveText() {
   
     var nine = document.querySelector("#nine").value;
@@ -33,8 +29,6 @@ $('.edit_cont')
     var four = document.querySelector("#four").value;
     var five = document.querySelector("#five").value;
    
-  
-    // TODO: Save email and password to localStorage and render the last registered user
     localStorage.setItem("9 AM", nine);
     localStorage.setItem("10 AM", ten);
     localStorage.setItem("11 AM", eleven);
@@ -44,7 +38,6 @@ $('.edit_cont')
     localStorage.setItem("3 PM", three);
     localStorage.setItem("4 PM", four);
     localStorage.setItem("5 PM", five);
-    // renderLastInput();
   };
 
   $('#row9 .textArea').val(localStorage.getItem ('9 AM'));
